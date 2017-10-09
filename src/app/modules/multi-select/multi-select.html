@@ -1,0 +1,6 @@
+<mat-form-field>
+    <input matInput placeholder="Input" (focus)="togglePopup(true)" (click)="togglePopup(true)">
+</mat-form-field>
+<div class="search-result" [style.height]="config.PopHeightInPx+'px'" [style.width]="config.PopWidthInPx+'px'" *ngIf="_togglePopup">
+    <ag-grid-angular style="height:100%; width:100%;" class="ag-fresh" [gridOptions]="_searchGridOptions"> </ag-grid-angular>
+</div>
